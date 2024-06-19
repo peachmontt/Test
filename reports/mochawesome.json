@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-19T14:56:16.006Z",
+    "end": "2024-06-19T14:56:18.660Z",
+    "duration": 2654,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7cc1fdaa-0d1a-4f19-88c7-13b178929acd",
+      "title": "",
+      "fullFile": "cypress/e2e/test.cy.js",
+      "file": "cypress/e2e/test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7456fc27-9a8d-4e84-8f2f-6b1ea69e3b5d",
+          "title": "Test Pecode",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test task",
+              "fullTitle": "Test Pecode Test task",
+              "timedOut": null,
+              "duration": 1443,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.pecodesoftware.com/qa-portal/greet.php\");\ncy.get(_locators.locators.loginButton).click();\ncy.get(_locators.locators.errorMessage2).should(\"have.text\", \"Please enter username.\");\ncy.get(_locators.locators.errorMessage3).should(\"have.text\", \"Please enter your password.\");\ncy.get(_locators.locators.userNameField).should(\"be.visible\").type(username);\n// we can save user login information to Fixtures.\n//Commands//Cypress.Commands.add('getTestDataFromAPI', () => { return cy.request('GET', 'API').then((response) => return response.body;  });});\n//\n// Or with database\ncy.get(_locators.locators.passwordField).should(\"be.visible\").type(password);\ncy.get(_locators.locators.loginButton).should(\"be.visible\").click();\ncy.get(_locators.locators.errorMessage1).should(\"have.text\", \"No account found with that username.\");\ncy.get(_locators.locators.img).should(\"be.visible\");\ncy.get(_locators.locators.text).should(\"have.text\", \"AQA internship Login\");",
+              "err": {},
+              "uuid": "407778f2-0b5f-4183-a2bd-ca51d7799d47",
+              "parentUUID": "7456fc27-9a8d-4e84-8f2f-6b1ea69e3b5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "407778f2-0b5f-4183-a2bd-ca51d7799d47"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
